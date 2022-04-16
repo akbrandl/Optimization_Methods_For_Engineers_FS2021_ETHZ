@@ -22,8 +22,12 @@ Implementation of a particle swarm optimizer with different extensions such as:
 
 ### 1.2. Functions
 1. `Particle.m`: class holding the properties and functions of object **Particle**.
-2. `StoppingCriteria.m`: function evaluating the stopping criterion. 
-3. `get_Topology.m`: generates swarm topology and stores it in a cell array for efficient access.   
+2. `SwarmOptimizer_TB.m`: Simple PSO algorithm that finds optimum/minimum (`glob_best_F`, `glob_best_pos`) to objective function (`fnc`). Additionally, it returns the number of required iterations (`iter`), the total number of required fitness-function evaluations `fnc_eval`, and a message `message` that indicates if PSO ran successfully or not.  
+3. `SwarmOptimizer_Monarchy.m`: Monarchy-based PSO algorithm that finds optimum/minimum (`glob_best_F`, `glob_best_pos`) to objective function (`fnc`), the number of required iterations (`iter`), the total number of required fitness-function evaluations `fnc_eval`, and a message `message` that indicates if PSO ran successfully or not. **Attention**: hyperparameters `w`, `a1` and `a2` are vectors with 2 elements as we have two classes of particles. 
+4. `run_MATLAB.m`: function that solves optimization problem unsing the built-in MATLAB PSO algorithm and returns found optimum, number of evalutations and iterations, and the required CPU_time. 
+5. `test_functions_2D.m`: selection of benchmark function. `x1` and `x2` correspond to the optimising parameter, and `CASE` corresponds to ID of selected benchmark (allowed values: 1...11). 
+6. `StoppingCriteria.m`: function evaluating the stopping criterion. 
+7. `get_Topology.m`: generates swarm topology and stores it in a cell array for efficient access.   
 -> *Note*: to change the citerion, change 'type'-variable within function (if `type = 1` then PSO stops if no better solution found in a certain amount of iterations , and if `type = 2` then PSO stops if no significant improvement of solution detected).
 4. `random_point.m`: generates random point in bounds `lb`, `up` with a resolution of 0.001. 
 
