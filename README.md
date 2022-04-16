@@ -5,7 +5,7 @@ Implementation of a particle swarm optimizer with different extensions such as:
   3. novel modification with intra-swarm hierarchical structure (monarchy-based PSO).
 
 
-## 1. File Structuring
+## 1. Files Structuring
 ### 1.1. PSO-specific parameter (modifiable)
 1. `fnc`, `fnc_select`:   function and function ID (1...11), respectively.
 2. `dim`:   dimension of search space (recommended: 2)
@@ -54,4 +54,4 @@ Available PSO parameters:
 The following functions are only for debugging and parameter optimization. Each particle position is stored in each iteration - PSO algorithm execution can be then observed using the function `plot_Optimizer.m`. Do not use these functions for actual optimization problems - they are slow, memory intensive functions.     
 
 4. `PSO_Plot.m`: function that executes simple PSO (see `SwarmOptimizer_TB.m`).     
-5. 'PSO_Plot_Monarchy.m': function that executes monarchy-based PSO (see `SwarmOptimizer_Monarchy.m`).
+5. `PSO_Plot_Monarchy.m`: function that executes monarchy-based PSO (see `SwarmOptimizer_Monarchy.m`).
