@@ -8,12 +8,12 @@ Implementation of a particle swarm optimizer with different extensions such as:
 ## 1. Files Structuring
 ### 1.1. PSO-specific parameter (modifiable)
 1. `fnc`, `fnc_select`:   function and function ID (1...11), respectively.
-2. `dim`:   dimension of search space (recommended: 2)
-3. `lb`, `ub`:   lower and upper bound of search space
-4. `N`: number of particles in swarm
-5. `max_iter`: maximum number of allowed iterations
-6. `w`, `a1`, `a2`: hyperparameters/acceleration coefficients
-7. `vel_rel`: maximum allowed velocity of particles
+2. `dim`:   dimension of search space (recommended: 2).
+3. `lb`, `ub`:   lower and upper bound of search space.
+4. `N`: number of particles in swarm.
+5. `max_iter`: maximum number of allowed iterations.
+6. `w`, `a1`, `a2`: hyperparameters/acceleration coefficients.
+7. `vel_rel`: maximum allowed velocity of particles.
 8. `CODE_SELECT`: encoding of PSO and swarm properties. 
     - 1st char (gPSO or lPSO?): \[g = global PSO; l = local PSO\]
     - 2nd char (Topology?): \[r = ring; w = wheel; n = von Neumann; x = random; f = full-mesh (gPSO)\]
@@ -32,7 +32,7 @@ Implementation of a particle swarm optimizer with different extensions such as:
 
 
 ### 1.3. Testbench framework
-1. `testbench.m`: function that runs and evaluates the simple PSO algorithm based on correctness, execution time, and the number of required iterations and function evaluations. Relevant parameters required for optimizer must be set by user (`fnc`, `dim`, `lb`, `ub`, `N`, `max_iter`, `w`, `a1`, `a2`, `vel_rel`, `fnc_select`, and `CODE_SELECT`)
+1. `testbench.m`: function that runs and evaluates the simple PSO algorithm based on correctness, execution time, and the number of required iterations and function evaluations. Relevant parameters required for optimizer must be set by user (`fnc`, `dim`, `lb`, `ub`, `N`, `max_iter`, `w`, `a1`, `a2`, `vel_rel`, `fnc_select`, and `CODE_SELECT`).
 2. `testbench_Monarchy.m`: same functionality as  `testbench.m`; however, it executes and evaluates the novel monarchy-based PSO. 
 3. `run_MATLAB.m`: function that solves optimization problem unsing the built-in MATLAB PSO algorithm and returns found optimum, number of evalutations and iterations, and the required CPU_time. 
 4. 
@@ -53,5 +53,5 @@ Available PSO parameters:
 
 The following functions are only for debugging and parameter optimization. Each particle position is stored in each iteration - PSO algorithm execution can be then observed using the function `plot_Optimizer.m`. Do not use these functions for actual optimization problems - they are slow, memory intensive functions.     
 
-4. `PSO_Plot.m`: function that executes simple PSO (see `SwarmOptimizer_TB.m`).     
+4. `PSO_Plot.m`: function that executes simple PSO (see `SwarmOptimizer_TB.m`).    
 5. `PSO_Plot_Monarchy.m`: function that executes monarchy-based PSO (see `SwarmOptimizer_Monarchy.m`).
