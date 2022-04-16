@@ -45,7 +45,7 @@ Available PSO parameters:
 	- `select_CASE` defines benchmark function, 
 	- `max_iter` defines maximum  number of allowed iterations,
 	- `N` defines number of particles in swarm,
-	- `CODE_SELECT_topography' defines the swarm topography, and
+	- `CODE_SELECT_topography` defines the swarm topography, and
 	- `vel_rel` defines maximum velocity of particles relative to search space.    
 
 2. `plot_benchmarks.m`: plot available (2-dim) benchmark functions (values: 1..11). 
